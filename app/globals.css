@@ -1,16 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: "#272625";
+  --secondary: "#fcfefa";
+  --accent: "#9a8b78";
+  --neutral: "#3c3c3c";
+  --base-100: "#b0a495";
+  --info: "#008db6";
+  --success: "#9cc400";
+  --warning: "#ffad00";
+  --error: "#ff2a63";
+}
+
 @layer components {
   .container {
-    @apply my-28
+    @apply mx-auto my-20;
+  }
+  .title {
+    @apply text-4xl font-medium
+  }
+  .btn {
+    @apply border-base-100 flex  items-center justify-center border-2 bg-accent text-sm font-medium text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
+  }
+  .bordered {
+    @apply border-base-100 border-[1px];
   }
 }
 
+@layer base {
+  h1 {
+    @apply my-3 text-5xl font-semibold;
+  }
+  h2 {
+    @apply my-2 text-3xl font-medium;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  /* font-family: "Montserrat", sans-serif !important; */
+}
+
 body {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
+  font-weight: 300;
 }
