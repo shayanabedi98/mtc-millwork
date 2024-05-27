@@ -11,7 +11,9 @@ export default function Home() {
       <OurServices />
       <IconsContainer />
       <AboutUs />
-      <OurWork />
+      <div className="bg-info">
+        <OurWork />
+      </div>
     </main>
   );
 }

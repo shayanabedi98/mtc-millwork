@@ -12,7 +12,7 @@
   --accent: "#9a8b78";
   --neutral: "#3c3c3c";
   --base-100: "#b0a495";
-  --info: "#008db6";
+  --info: "#60584E";
   --success: "#9cc400";
   --warning: "#ffad00";
   --error: "#ff2a63";
@@ -20,16 +20,19 @@
 
 @layer components {
   .container {
-    @apply mx-auto my-20;
+    @apply mx-auto my-36;
   }
   .title {
-    @apply text-4xl font-medium
+    @apply text-5xl font-semibold;
   }
   .btn {
-    @apply border-base-100 flex  items-center justify-center border-2 bg-accent text-sm font-medium text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
+    @apply flex h-16  w-60 items-center justify-center border-2 border-base-100 bg-accent text-sm font-medium text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
   }
   .bordered {
-    @apply border-base-100 border-[1px];
+    @apply border-[1px] border-base-100;
+  }
+  .container-padding {
+    @apply py-20;
   }
 }
 

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
+import { motion, AnimatePresence } from "framer-motion";
 
 type Props = {
   images: string[];
@@ -14,7 +15,7 @@ export default function Carousel({ images }: Props) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   return (
-    <div className=" flex w-full flex-col items-center ">
+    <div className="flex w-full select-none flex-col items-center">
       <div className="flex w-full items-center gap-10">
         <div
           className="bordered relative left-10 cursor-pointer bg-neutral text-4xl"
@@ -53,7 +54,7 @@ export default function Carousel({ images }: Props) {
           return (
             <div key={index}>
               <Image
-                className={`h-20 w-28 cursor-pointer object-cover ${currentImageIndex == index ? "border-secondary border-[1px]" : "opacity-50 bordered"}`}
+                className={`h-20 w-28 cursor-pointer object-cover ${currentImageIndex == index ? "border-[1px] border-secondary" : "bordered opacity-50"}`}
                 width={200}
                 height={100}
                 src={image}
@@ -64,24 +65,49 @@ export default function Carousel({ images }: Props) {
           );
         })}
       </div>
-      {isShowImage && (
-        <div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0)]">
-          <div
-            className="absolute right-10 top-10 cursor-pointer text-4xl"
-            onClick={() => setIsShowImage(false)}
+      <AnimatePresence>
+        {isShowImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0)]"
           >
-            <IoMdClose />
-          </div>
-          <Image
-            className="mx-auto w-[60%]"
-            width={1900}
-            height={1080}
-            priority
-            src={images[selectedImageIndex]}
-            alt=""
-          />
-        </div>
-      )}
+            <div
+              className="absolute right-10 top-10 cursor-pointer text-4xl"
+              onClick={() => setIsShowImage(false)}
+            >
+              <IoMdClose className="lg:hover:text-stone-400" />
+            </div>
+            <div className="flex items-center justify-center">
+              <IoIosArrowBack
+                className="relative left-12 cursor-pointer text-5xl lg:hover:text-stone-400"
+                onClick={() =>
+                  setSelectedImageIndex((prev) =>
+                    selectedImageIndex > 0 ? prev - 1 : images.length - 1,
+                  )
+                }
+              />
+              <Image
+                className="mx-auto min-w-[60%] max-w-[80%]"
+                width={1900}
+                height={1080}
+                priority
+                src={images[selectedImageIndex]}
+                alt=""
+              />
+              <IoIosArrowBack
+                className="relative right-12 rotate-180 cursor-pointer text-5xl lg:hover:text-stone-400"
+                onClick={() =>
+                  setSelectedImageIndex((prev) =>
+                    selectedImageIndex == images.length - 1 ? 0 : prev + 1,
+                  )
+                }
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
