@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutUsImage from "@/assets/otherPictures/aboutUsHome.webp";
+import aboutUsImage from "@/public/assets/otherPictures/aboutUsHome.webp";
 import Link from "next/link";
 
 export default function AboutUs() {

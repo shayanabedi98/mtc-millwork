@@ -1,9 +1,9 @@
 import Icons from "./Icons";
-import kitchen from "@/assets/icons/kitchen-set.png";
-import closet from "@/assets/icons/closet.png"
-import wallUnit from "@/assets/icons/interior.png"
-import vanity from "@/assets/icons/vanity.png"
-import custom from "@/assets/icons/blueprint.png"
+import kitchen from "@/public/assets/icons/kitchen-set.png";
+import closet from "@/public/assets/icons/closet.png";
+import wallUnit from "@/public/assets/icons/interior.png";
+import vanity from "@/public/assets/icons/vanity.png";
+import custom from "@/public/assets/icons/blueprint.png";
 
 export default function IconsContainer() {
   return (

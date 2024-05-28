@@ -22,12 +22,22 @@
   .container {
     @apply mx-auto my-36;
   }
+
+  .gapped {
+    @apply gap-12;
+  }
+
   .title {
-    @apply text-5xl font-semibold;
+    @apply text-5xl font-semibold uppercase;
   }
   .btn {
-    @apply flex h-16  w-60 items-center justify-center border-2 border-base-100 bg-accent text-sm font-medium text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
+    @apply flex h-16 w-60 items-center justify-center border-2 border-base-100 bg-accent text-base font-semibold text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
   }
+
+  .btn2 {
+    @apply flex h-12 w-48 items-center justify-center border-2 border-base-100 bg-accent text-sm font-semibold text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
+  }
+
   .bordered {
     @apply border-[1px] border-base-100;
   }
@@ -55,4 +65,38 @@
 
 body {
   font-weight: 300;
+}
+
+.contact-home textarea {
+  resize: none;
+  @apply h-20;
+}
+
+.contact-home input,
+.contact-home textarea {
+  padding: 2px 5px;
+  @apply bordered border-secondary w-96 bg-primary text-sm outline-none;
+}
+
+.contact-home input[name="lname"],
+.contact-home input[name="fname"] {
+  padding: 2px 5px;
+  @apply w-[186px];
+}
+
+.contact-home input:-webkit-autofill,
+.contact-home textarea:-webkit-autofill {
+  background-color: var(--primary);
+}
+
+.contact-home label {
+  @apply place-self-start text-xs text-secondary;
+}
+
+.contact-icon {
+  @apply text-4xl;
+}
+
+iframe:focus {
+  outline: none;
 }

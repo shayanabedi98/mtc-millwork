@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isActiveMovileNav, setIsActiveMobileNav] = useState(false);
 
   return (
-    <header className="fixed left-0 top-0 z-20 flex w-full items-center justify-between px-4 h-28 lg:px-10 bg-[rgba(0,0,0,0.5)]">
+    <header className="fixed left-0 top-0 z-20 flex w-full items-center justify-between px-4 h-28 lg:px-10 bg-[rgba(0,0,0,0.5)] shadow-lg">
       <div className="z-20 flex items-center justify-center text-lg font-medium">
         {/* <Image src="" alt="" width={100} height={100} /> */}
         <Link

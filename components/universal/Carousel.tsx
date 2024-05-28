@@ -27,17 +27,28 @@ export default function Carousel({ images }: Props) {
         >
           <IoIosArrowBack />
         </div>
-        <Image
-          className="bordered mx-auto h-[700px] w-[80%] cursor-pointer object-cover"
-          onClick={() => {
-            setIsShowImage(true);
-            setSelectedImageIndex(currentImageIndex);
-          }}
-          width={1400}
-          height={900}
-          src={images[currentImageIndex]}
-          alt=""
-        />
+        <AnimatePresence mode="popLayout">
+          <motion.div
+          className="w-full"
+            key={currentImageIndex}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.1}}
+          >
+            <Image
+              className="bordered mx-auto h-[700px] w-[90%] cursor-pointer object-cover"
+              onClick={() => {
+                setIsShowImage(true);
+                setSelectedImageIndex(currentImageIndex);
+              }}
+              width={1400}
+              height={900}
+              src={images[currentImageIndex]}
+              alt=""
+            />
+          </motion.div>
+        </AnimatePresence>
         <div
           className="bordered relative right-10 rotate-180 cursor-pointer bg-neutral text-4xl"
           onClick={() =>

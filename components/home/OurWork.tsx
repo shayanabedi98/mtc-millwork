@@ -3,7 +3,7 @@ import Carousel from "../universal/Carousel";
 
 export default function OurWork() {
   return (
-    <div className="container container-padding flex flex-col items-center justify-center">
+    <div className="container-padding container mb-0 flex flex-col items-center justify-center">
       <h3 className="title mb-8">Our Work</h3>
 
       <Carousel
