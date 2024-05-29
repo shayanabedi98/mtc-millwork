@@ -44,11 +44,14 @@
   .container-padding {
     @apply py-20;
   }
+  .hero-header {
+    @apply h-28 w-96 bg-primary bg-opacity-50;
+  }
 }
 
 @layer base {
   h1 {
-    @apply my-3 text-5xl font-semibold;
+    @apply my-3 flex items-center justify-center text-5xl font-semibold;
   }
   h2 {
     @apply my-2 text-3xl font-medium;
@@ -75,7 +78,7 @@ body {
 .contact-home input,
 .contact-home textarea {
   padding: 2px 5px;
-  @apply bordered border-secondary w-96 bg-primary text-sm outline-none;
+  @apply bordered w-96 border-secondary bg-primary text-sm outline-none;
 }
 
 .contact-home input[name="lname"],
@@ -93,10 +96,21 @@ body {
   @apply place-self-start text-xs text-secondary;
 }
 
+.contact-contact input,
+.contact-contact textarea {
+  padding: 2px 5px;
+  @apply bordered w-[500px] border-secondary bg-primary text-sm outline-none;
+  resize: none;
+}
+
 .contact-icon {
   @apply text-4xl;
 }
 
 iframe:focus {
   outline: none;
+}
+
+.hero1 {
+  object-position: 0 -380px;
 }

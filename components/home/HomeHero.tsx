@@ -26,7 +26,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <div className="relative mt-28 bordered">
+    <div className="relative mt-28 bordered border-l-0 border-r-0">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={slideShowIndex}
@@ -36,7 +36,7 @@ export default function HomeHero() {
           transition={{ duration: 0.5 }}
         >
           <Image
-            className="mx-auto h-[750px] w-full object-cover"
+            className="mx-auto h-[810px] w-full object-cover"
             priority
             width={1980}
             height={1080}

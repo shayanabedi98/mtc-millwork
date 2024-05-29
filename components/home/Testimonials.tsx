@@ -45,7 +45,7 @@ export default function Testimonials() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
           >
             <p className="flex h-64 items-center text-2xl font-normal">
               &quot;{testimonialsList[testimonialIndex].review}&quot;

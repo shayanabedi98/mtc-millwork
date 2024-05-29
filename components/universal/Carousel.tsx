@@ -15,10 +15,10 @@ export default function Carousel({ images }: Props) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   return (
-    <div className="flex w-full select-none flex-col items-center">
+    <div className="container relative my-0 flex w-full select-none flex-col items-center">
       <div className="flex w-full items-center gap-10">
         <div
-          className="bordered relative left-10 cursor-pointer bg-neutral text-4xl"
+          className="bordered absolute left-10 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex > 0 ? prev - 1 : images.length - 1,
@@ -29,28 +29,28 @@ export default function Carousel({ images }: Props) {
         </div>
         <AnimatePresence mode="popLayout">
           <motion.div
-          className="w-full"
+            className="w-full"
             key={currentImageIndex}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.1}}
+            transition={{ duration: 0.1 }}
           >
             <Image
-              className="bordered mx-auto h-[700px] w-[90%] cursor-pointer object-cover"
+              className="bordered mx-auto h-[700px] w-full cursor-pointer object-cover"
               onClick={() => {
                 setIsShowImage(true);
                 setSelectedImageIndex(currentImageIndex);
               }}
-              width={1400}
-              height={900}
+              width={1920}
+              height={1080}
               src={images[currentImageIndex]}
               alt=""
             />
           </motion.div>
         </AnimatePresence>
         <div
-          className="bordered relative right-10 rotate-180 cursor-pointer bg-neutral text-4xl"
+          className="bordered absolute right-10 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex == images.length - 1 ? 0 : prev + 1,
