@@ -1,4 +1,5 @@
-import ContactUsEmailForm from "@/components/contact/ContactUsEmailForm";
+import Questions from "@/components/contact/Questions";
+import VisitUs from "@/components/contact/VisitUs";
 import Hero from "@/components/universal/Hero";
 
 export default function Contact() {
@@ -10,7 +11,8 @@ export default function Contact() {
         h1="CONTACT"
         heroClass="hero1"
       />
-      <ContactUsEmailForm />
+      <Questions />
+      <VisitUs />
     </main>
   );
 }

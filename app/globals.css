@@ -45,7 +45,7 @@
     @apply py-20;
   }
   .hero-header {
-    @apply h-28 w-96 bg-primary bg-opacity-50;
+    @apply h-32 w-96 bg-accent bg-opacity-80 bordered shadow-lg;
   }
 }
 
@@ -96,12 +96,9 @@ body {
   @apply place-self-start text-xs text-secondary;
 }
 
-.contact-contact input,
+/* .contact-contact input,
 .contact-contact textarea {
-  padding: 2px 5px;
-  @apply bordered w-[500px] border-secondary bg-primary text-sm outline-none;
-  resize: none;
-}
+} */
 
 .contact-icon {
   @apply text-4xl;
@@ -112,5 +109,5 @@ iframe:focus {
 }
 
 .hero1 {
-  object-position: 0 -380px;
+  object-position: 0 63%;
 }

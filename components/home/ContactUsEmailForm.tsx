@@ -46,11 +46,11 @@ export default function ContactUsEmailForm() {
           className="hidden"
         />
         <div className="flex gap-[12px]">
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <label htmlFor="fname">First Name</label>
             <input type="text" name="fname" required />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col gap-2">
             <label htmlFor="lname">Last Name</label>
             <input type="text" name="lname" required />
           </div>
@@ -61,7 +61,7 @@ export default function ContactUsEmailForm() {
         <input type="tel" name="phone" inputMode="numeric" />
         <label htmlFor="message">Message</label>
         <textarea name="message" required></textarea>
-        <button type="submit" className="btn2 w-full my-4">
+        <button type="submit" className="btn2 my-4 w-full">
           Submit Form
         </button>
       </form>
