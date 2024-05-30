@@ -2,7 +2,7 @@ import ContactUsEmailForm from "../home/ContactUsEmailForm";
 
 export default function Questions() {
   return (
-    <div className="container my-0 container-padding">
+    <div className="container-padding">
       <div className="bordered container-padding mx-auto flex w-2/3 items-center justify-center gap-12 bg-info px-10">
         <div className="flex w-1/2 flex-col items-start justify-center gap-8">
           <h3 className="title">Questions?</h3>

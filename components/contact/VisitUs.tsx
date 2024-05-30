@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function VisitUs() {
   return (
-    <div className="container-padding container my-0">
+    <div className="container-padding">
       <div className="bordered container-padding mx-auto flex w-2/3 flex-col items-center justify-center bg-info px-10">
         <div className="flex justify-center gap-12">
           <div className="flex w-1/2 flex-col items-start gap-8">

@@ -17,7 +17,9 @@ export default function HomeHero() {
     const interval = setInterval(() => {
       setOpacity(0);
       setTimeout(() => {
-        setSlideShowIndex((prevIndex) => (prevIndex + 1) % slideShowImages.length);
+        setSlideShowIndex(
+          (prevIndex) => (prevIndex + 1) % slideShowImages.length,
+        );
         // Fade in the new image
         setOpacity(1);
       }, 500); // Adjust this value to match your fade transition duration
@@ -26,17 +28,18 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <div className="relative mt-28 bordered border-l-0 border-r-0">
+    <div className="bordered relative mt-28 border-l-0 border-r-0 bg-accent">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={slideShowIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: opacity }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 4 }}
+          className=""
         >
           <Image
-            className="mx-auto h-[810px] w-full object-cover"
+            className="mx-auto h-[810px] w-full bg-accent object-cover"
             priority
             width={1980}
             height={1080}
@@ -45,13 +48,19 @@ export default function HomeHero() {
           />
         </motion.div>
       </AnimatePresence>
-      <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.15)]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 1.2, duration: 1 }}
+        className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.15)]"
+      >
         <h1>Welcome to MTC Millwork</h1>
         <h2>Where we create timeless elegance</h2>
-        <Link href="/contact" className="btn mt-20 bordered">
+        <Link href="/contact" className="btn bordered mt-20">
           Contact
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 }

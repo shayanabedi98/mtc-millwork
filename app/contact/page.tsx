@@ -11,8 +11,10 @@ export default function Contact() {
         h1="CONTACT"
         heroClass="hero1"
       />
+      <div className="container">
       <Questions />
       <VisitUs />
+      </div>
     </main>
   );
 }
