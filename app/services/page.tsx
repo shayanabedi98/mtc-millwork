@@ -1,4 +1,5 @@
 import ServicesInfo from "@/components/services/ServicesInfo";
+import ServicesMore from "@/components/services/ServicesMore";
 import Hero from "@/components/universal/Hero";
 
 export default function Services() {
@@ -47,6 +48,7 @@ export default function Services() {
           content="At MTC Millwork, we specialize in custom millwork for residential and commercial projects. From kitchens and vanities to wall units and closets, we take care of all your custom millwork needs with the finest materials and highest quality workmanship."
         />
       </div>
+      <ServicesMore />
     </main>
   );
 }

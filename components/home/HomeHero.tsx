@@ -51,8 +51,7 @@ export default function HomeHero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 1.2, duration: 1 }}
+        transition={{ delay: 0.8, duration: 1.5 }}
         className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.15)]"
       >
         <h1>Welcome to MTC Millwork</h1>
