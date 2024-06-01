@@ -33,15 +33,39 @@ export default function Navbar() {
         </Link>
       </div>
       <nav className="w-full">
-        <div className="flex items-center justify-center gap-5 text-sm max-lg:hidden">
-          <NavbarItemDesktop content="HOME" location="/" />
-          <NavbarItemDesktop content="CONTACT" location="/contact" />
-          <NavbarItemDesktop content="SERVICES" location="/services" />
-          <NavbarItemDesktop content="PROJECTS" location="/projects" />
+        <div className="flex items-center gap-12 justify-end text-sm max-lg:hidden">
+          <div className="flex gap-5">
+            <NavbarItemDesktop content="HOME" location="/" />
+            <NavbarItemDesktop content="CONTACT" location="/contact" />
+            <NavbarItemDesktop content="SERVICES" location="/services" />
+            <NavbarItemDesktop content="PROJECTS" location="/projects" />
+          </div>
+          <div className="flex items-center justify-end gap-2 pl-12 border-l-[1px] border-accent text-xl transition duration-100 shadow-2xl">
+            <a
+              className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
+              href="tel:+14165000045"
+            >
+              <BsTelephoneFill />
+            </a>
+            <Link
+              className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
+              href="https://www.instagram.com/mtcmillwork"
+              target="_blank"
+            >
+              <RiInstagramFill />
+            </Link>
+            <Link
+              className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
+              href="https://www.facebook.com/mtcmillwork"
+              target="_blank"
+            >
+              <FaFacebookF />
+            </Link>
+          </div>
         </div>
 
         <div
-          className="flex flex-col gap-1 lg:hidden"
+          className="flex flex-col items-end gap-1 lg:hidden"
           onClick={() => setIsActiveMobileNav(!isActiveMovileNav)}
         >
           <motion.div
@@ -86,28 +110,6 @@ export default function Navbar() {
           )}
         </AnimatePresence>
       </nav>
-      <div className="flex w-full items-center justify-end">
-        <a
-          className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 text-2xl font-normal transition duration-100 ease-in-out hover:border-current"
-          href="tel:+14165000045"
-        >
-          <BsTelephoneFill />
-        </a>
-        <Link
-          className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 text-2xl font-normal transition duration-100 ease-in-out hover:border-current"
-          href="https://www.instagram.com/mtcmillwork"
-          target="_blank"
-        >
-          <RiInstagramFill />
-        </Link>
-        <Link
-          className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 text-xl font-normal transition duration-100 ease-in-out hover:border-current"
-          href="https://www.facebook.com/mtcmillwork"
-          target="_blank"
-        >
-          <FaFacebookF />
-        </Link>
-      </div>
     </header>
   );
 }
