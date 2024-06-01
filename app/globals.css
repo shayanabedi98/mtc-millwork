@@ -28,7 +28,7 @@
   }
 
   .title {
-    @apply text-5xl font-semibold uppercase;
+    @apply text-3xl xl:text-5xl font-semibold uppercase;
   }
   .btn {
     @apply flex h-16 w-60 items-center justify-center border-2 border-base-100 bg-accent text-base font-semibold text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
@@ -110,4 +110,7 @@ iframe:focus {
 
 .hero1 {
   object-position: 0 63%;
+}
+.hero3 {
+  object-position: 0 35%;
 }
