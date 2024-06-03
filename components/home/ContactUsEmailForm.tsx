@@ -36,7 +36,7 @@ export default function ContactUsEmailForm() {
 
   return (
     <div className="contact-home">
-      <form onSubmit={onSubmit} className="flex flex-col gap-2 text-secondary">
+      <form onSubmit={onSubmit} className="flex flex-col items-center gap-2 text-secondary">
         <input
           value={honeyPot}
           onChange={(e) => setHoneyPot(e.target.value)}
@@ -45,7 +45,7 @@ export default function ContactUsEmailForm() {
           name="subject"
           className="hidden"
         />
-        <div className="flex gap-[12px]">
+        <div className="name flex gap-[12px]">
           <div className="flex flex-col gap-2">
             <label htmlFor="fname">First Name</label>
             <input type="text" name="fname" required />

@@ -25,10 +25,10 @@ export default function HomeHero() {
       }, 500); // Adjust this value to match your fade transition duration
     }, 9000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   return (
-    <div className="bordered relative mt-28 border-l-0 border-r-0 bg-accent">
+    <div className="bordered relative mt-16 border-l-0 border-r-0 bg-accent lg:mt-28">
       <AnimatePresence mode="popLayout">
         <motion.div
           key={slideShowIndex}
@@ -39,7 +39,7 @@ export default function HomeHero() {
           className=""
         >
           <Image
-            className="mx-auto h-[810px] w-full bg-accent object-cover"
+            className="mx-auto h-[550px] w-full bg-accent object-cover md:h-[700px] lg:h-[810px]"
             priority
             width={1980}
             height={1080}

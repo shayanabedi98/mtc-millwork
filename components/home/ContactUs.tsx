@@ -10,7 +10,7 @@ export default function ContactUs() {
   return (
     <div className="container-padding container my-0 flex flex-col items-center justify-center">
       <h3 className="title">Contact Us</h3>
-      <div className="container-padding flex justify-center gap-12">
+      <div className="container-padding flex flex-col lg:flex-row justify-center gap-12">
         <div className="flex flex-col gap-12 p-4">
           <div className="flex items-center gap-10">
             <IoLocationOutline className="contact-icon" />

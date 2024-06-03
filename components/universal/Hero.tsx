@@ -41,7 +41,7 @@ export default function Hero({ src, alt, h1, heroClass }: Props) {
         <div>
           <Image
             priority
-            className={`${heroClass} h-[700px] w-full object-cover`}
+            className={`${heroClass} h-[800px] w-full object-cover`}
             src={src}
             alt={alt}
             width={2000}

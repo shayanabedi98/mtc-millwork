@@ -12,8 +12,8 @@ export default function Contact() {
         heroClass="hero1"
       />
       <div className="container">
-      <Questions />
-      <VisitUs />
+        <Questions />
+        <VisitUs />
       </div>
     </main>
   );
