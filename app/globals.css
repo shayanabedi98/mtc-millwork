@@ -50,7 +50,7 @@
     @apply py-20;
   }
   .hero-header {
-    @apply bordered h-32 w-96 bg-accent bg-opacity-80 shadow-lg;
+    @apply bordered h-20 md:h-32 w-60 md:w-96 bg-accent bg-opacity-80 shadow-lg;
   }
 }
 
@@ -118,4 +118,16 @@ iframe:focus {
 }
 .hero3 {
   object-position: 0 10%;
+}
+
+@media (max-width: 1280px) {
+  .hero1 {
+    object-position: 20% 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero1 {
+    object-position: 60% 0;
+  }
 }

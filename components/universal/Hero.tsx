@@ -36,12 +36,12 @@ export default function Hero({ src, alt, h1, heroClass }: Props) {
         exit={{ opacity: 0 }}
         transition={{duration: 1}}
         key={pathIndex}
-        className="bordered relative mt-28 border-l-0 border-r-0"
+        className="bordered relative mt-16 lg:mt-28 border-l-0 border-r-0"
       >
         <div>
           <Image
             priority
-            className={`${heroClass} h-[800px] w-full object-cover`}
+            className={`${heroClass} h-[550px] md:h-[700px] lg:h-[810px] w-full object-cover`}
             src={src}
             alt={alt}
             width={2000}

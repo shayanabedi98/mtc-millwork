@@ -10,30 +10,31 @@ export default function HomeHero() {
     "/assets/otherPictures/hero2.webp",
     "/assets/otherPictures/hero3.webp",
   ];
-  const [opacity, setOpacity] = useState(1);
-  const [slideShowIndex, setSlideShowIndex] = useState(0);
+  // const [opacity, setOpacity] = useState(1);
+  // const [slideShowIndex, setSlideShowIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setOpacity(0);
-      setTimeout(() => {
-        setSlideShowIndex(
-          (prevIndex) => (prevIndex + 1) % slideShowImages.length,
-        );
-        // Fade in the new image
-        setOpacity(1);
-      }, 500); // Adjust this value to match your fade transition duration
-    }, 9000);
-    return () => clearInterval(interval);
-  });
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setOpacity(0);
+  //     setTimeout(() => {
+  //       setSlideShowIndex(
+  //         (prevIndex) => (prevIndex + 1) % slideShowImages.length,
+  //       );
+  //       // Fade in the new image
+  //       setOpacity(1);
+  //     }, 500); // Adjust this value to match your fade transition duration
+  //   }, 9000);
+  //   return () => clearInterval(interval);
+  // });
 
   return (
     <div className="bordered relative mt-16 border-l-0 border-r-0 bg-accent lg:mt-28">
       <AnimatePresence mode="popLayout">
         <motion.div
-          key={slideShowIndex}
+          // key={slideShowIndex}
           initial={{ opacity: 0 }}
-          animate={{ opacity: opacity }}
+          // animate={{ opacity: opacity }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 4 }}
           className=""
@@ -43,7 +44,7 @@ export default function HomeHero() {
             priority
             width={1980}
             height={1080}
-            src={slideShowImages[slideShowIndex]}
+            src={slideShowImages[0]}
             alt="Home kitchen with a beautiful countertop and modern cabinets"
           />
         </motion.div>

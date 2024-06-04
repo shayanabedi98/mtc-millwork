@@ -42,7 +42,7 @@ export default function Footer() {
             <HiOutlinePhone />
           </a>
         </div>
-        <div className="flex items-baseline text-xs">
+        <div className="flex text-center items-baseline text-xs">
           <p>
             &copy; {year} MTC Millwork Inc. All rights reserved. Designed &
             Developed by{" "}
