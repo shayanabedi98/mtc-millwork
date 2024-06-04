@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function OurServices() {
   return (
     <div className="container flex flex-col justify-center lg:flex-row">
-      <div className="lg:border-r-0 bordered lg:w-1/2">
-        <Image src={ourServicesImage} alt="" />
+      <div className="bordered lg:w-1/2 lg:border-r-0">
+        <Image className="max-lg:max-h-[400px] lg:min-h-[550px] object-cover" src={ourServicesImage} alt="" />
       </div>
-      <div className="py-10 flex flex-col items-center justify-center bordered lg:w-1/2">
-        <div className="flex w-full flex-col gap-10 leading-7 lg:w-2/3">
+      <div className="bordered flex flex-col items-center justify-center max-lg:px-4 max-xl:py-10 lg:w-1/2">
+        <div className="flex w-full flex-col gap-10 leading-7 max-lg:text-center lg:w-2/3">
           <h3 className="title">Our Services</h3>
           <p>
             At MTC Millwork, we offer a wide range of services to meet all your

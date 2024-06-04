@@ -18,7 +18,7 @@ export default function Carousel({ images }: Props) {
     <div className="container relative my-0 flex w-full select-none flex-col items-center">
       <div className="flex w-full items-center gap-10">
         <div
-          className="bordered absolute left-10 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent"
+          className="bordered absolute left-1 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:left-10"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex > 0 ? prev - 1 : images.length - 1,
@@ -37,11 +37,12 @@ export default function Carousel({ images }: Props) {
             transition={{ duration: 0.1 }}
           >
             <Image
-              className="bordered mx-auto h-[700px] w-full cursor-pointer object-cover"
+              className="bordered mx-auto h-[300px] w-full cursor-pointer object-cover sm:h-[400px] lg:h-[700px]"
               onClick={() => {
                 setIsShowImage(true);
                 setSelectedImageIndex(currentImageIndex);
               }}
+              priority
               width={1920}
               height={1080}
               src={images[currentImageIndex]}
@@ -50,7 +51,7 @@ export default function Carousel({ images }: Props) {
           </motion.div>
         </AnimatePresence>
         <div
-          className="bordered absolute right-10 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent"
+          className="bordered absolute right-1 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:right-10"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex == images.length - 1 ? 0 : prev + 1,
@@ -60,7 +61,7 @@ export default function Carousel({ images }: Props) {
           <IoIosArrowBack />
         </div>
       </div>
-      <div className="mt-4 flex justify-center gap-2">
+      <div className="mt-4 hidden justify-center gap-2 sm:flex">
         {images.map((image, index) => {
           return (
             <div key={index}>
@@ -85,14 +86,14 @@ export default function Carousel({ images }: Props) {
             className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0)]"
           >
             <div
-              className="absolute right-10 top-10 cursor-pointer text-4xl"
+              className="absolute right-2 top-10 cursor-pointer text-4xl lg:right-10"
               onClick={() => setIsShowImage(false)}
             >
               <IoMdClose className="lg:hover:text-stone-400" />
             </div>
             <div className="flex items-center justify-center">
               <IoIosArrowBack
-                className="relative left-12 cursor-pointer text-5xl lg:hover:text-stone-400"
+                className="max-md:bordered absolute left-2 cursor-pointer text-4xl max-md:bg-accent lg:relative lg:left-12 lg:text-5xl lg:hover:text-stone-400"
                 onClick={() =>
                   setSelectedImageIndex((prev) =>
                     selectedImageIndex > 0 ? prev - 1 : images.length - 1,
@@ -100,7 +101,7 @@ export default function Carousel({ images }: Props) {
                 }
               />
               <Image
-                className="mx-auto min-w-[60%] max-w-[80%]"
+                className="mx-auto w-full md:min-w-[60%] md:max-w-[80%]"
                 width={1900}
                 height={1080}
                 priority
@@ -108,7 +109,7 @@ export default function Carousel({ images }: Props) {
                 alt=""
               />
               <IoIosArrowBack
-                className="relative right-12 rotate-180 cursor-pointer text-5xl lg:hover:text-stone-400"
+                className="max-md:bordered absolute right-2 rotate-180 cursor-pointer text-4xl max-md:bg-accent lg:relative lg:right-12 lg:text-5xl lg:hover:text-stone-400"
                 onClick={() =>
                   setSelectedImageIndex((prev) =>
                     selectedImageIndex == images.length - 1 ? 0 : prev + 1,

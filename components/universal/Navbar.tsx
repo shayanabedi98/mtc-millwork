@@ -14,14 +14,19 @@ import logoIcon from "@/public/assets/otherPictures/favicon-transparent.png";
 
 export default function Navbar() {
   const [isActiveMovileNav, setIsActiveMobileNav] = useState(false);
-  const [showSocials, setShowSocials] = useState(false);
+
+  const handleToggleNavOff = () => {
+    setTimeout(() => {
+      setIsActiveMobileNav(false);
+    }, 500);
+  };
 
   return (
-    <header className="fixed left-0 top-0 z-20 flex h-16 lg:h-28 w-full items-center justify-between bg-primary bg-opacity-70 px-8 shadow-lg lg:px-10">
+    <header className="fixed left-0 top-0 z-20 flex h-16 w-full items-center justify-between bg-primary bg-opacity-70 px-8 shadow-lg lg:h-28 lg:px-10">
       <div className="z-20 flex w-full items-center justify-start text-lg font-medium">
         {/* <Image src="" alt="" width={100} height={100} /> */}
         <Link
-          className="flex items-center justify-center gap-4 border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
+          className="flex items-center justify-center gap-4 border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out lg:hover:border-current"
           href="/"
         >
           <Image
@@ -29,7 +34,11 @@ export default function Navbar() {
             alt="MTC Millwork logo symbol"
             className="w-10 lg:w-14"
           />
-          <Image src={logoName} alt="MTC Millwork logo name" className="w-32 lg:w-40" />
+          <Image
+            src={logoName}
+            alt="MTC Millwork logo name"
+            className="w-32 lg:w-40"
+          />
         </Link>
       </div>
       <nav className="w-full">
@@ -68,7 +77,7 @@ export default function Navbar() {
           className="flex justify-end"
           onClick={() => setIsActiveMobileNav(!isActiveMovileNav)}
         >
-          <div className="flex h-6 w-[25px] flex-col items-end justify-center gap-1 lg:hidden">
+          <div className="z-20 flex h-6 w-[25px] flex-col items-end justify-center gap-1 lg:hidden">
             <motion.div
               className="z-20 h-[2px] w-[25px] bg-secondary"
               initial={{ position: "relative" }}
@@ -104,10 +113,26 @@ export default function Navbar() {
               animate={{ right: 0 }}
               exit={{ right: "-100%" }}
             >
-              <NavbarItemMobile location="/" content="HOME" />
-              <NavbarItemMobile location="/contact" content="CONTACT" />
-              <NavbarItemMobile location="/services" content="SERVICES" />
-              <NavbarItemMobile location="/projects" content="PROJECTS" />
+              <NavbarItemMobile
+                handleNavMobile={handleToggleNavOff}
+                location="/"
+                content="HOME"
+              />
+              <NavbarItemMobile
+                handleNavMobile={handleToggleNavOff}
+                location="/contact"
+                content="CONTACT"
+              />
+              <NavbarItemMobile
+                handleNavMobile={handleToggleNavOff}
+                location="/services"
+                content="SERVICES"
+              />
+              <NavbarItemMobile
+                handleNavMobile={handleToggleNavOff}
+                location="/projects"
+                content="PROJECTS"
+              />
             </motion.div>
           )}
         </AnimatePresence>

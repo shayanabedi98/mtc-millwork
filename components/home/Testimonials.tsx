@@ -26,9 +26,9 @@ export default function Testimonials() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
 
   return (
-    <div className="testimonials container-padding gapped container my-0 flex items-center justify-center text-primary">
+    <div className="container-padding gapped container relative my-0 flex items-center justify-center text-primary">
       <IoIosArrowBack
-        className="relative left-10 cursor-pointer text-5xl"
+        className="absolute bottom-16 left-1 cursor-pointer text-5xl lg:relative lg:left-10"
         onClick={() => {
           setTestimonialIndex((prev) =>
             prev === 0 ? testimonialsList.length - 1 : prev - 1,
@@ -41,16 +41,16 @@ export default function Testimonials() {
         <AnimatePresence mode="popLayout">
           <motion.div
             key={testimonialIndex}
-            className="gapped relative mx-auto flex max-w-[768px] flex-col items-center justify-center overflow-hidden"
+            className="gapped relative mx-auto flex flex-col items-center justify-center overflow-hidden lg:max-w-[768px]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <p className="flex h-64 items-center text-2xl font-normal">
+            <p className="md:2/3 flex h-72 items-center text-base font-normal lg:w-full sm:h-48 sm:w-3/4 md:h-64 lg:text-2xl">
               &quot;{testimonialsList[testimonialIndex].review}&quot;
             </p>
-            <p className="text-lg font-normal">
+            <p className="text-base font-normal lg:text-lg">
               {testimonialsList[testimonialIndex].name}
             </p>
           </motion.div>
@@ -60,7 +60,6 @@ export default function Testimonials() {
                 <FaRegCircle
                   onClick={() => setTestimonialIndex(index)}
                   key={index}
-                  // style={{ fill: index === testimonialIndex ? "" : ""}}
                   className={`cursor-pointer rounded-full ${index === testimonialIndex ? "bg-primary" : ""}`}
                 />
               );
@@ -69,7 +68,7 @@ export default function Testimonials() {
         </AnimatePresence>
       </div>
       <IoIosArrowBack
-        className="relative right-10 rotate-180 cursor-pointer text-5xl"
+        className="absolute bottom-16 right-1 rotate-180 cursor-pointer text-5xl lg:relative lg:right-16"
         onClick={() => {
           setTestimonialIndex((prev) =>
             prev === testimonialsList.length - 1 ? 0 : prev + 1,

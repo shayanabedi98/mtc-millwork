@@ -28,14 +28,14 @@
   }
 
   .title {
-    @apply text-3xl font-semibold uppercase xl:text-5xl;
+    @apply text-2xl font-semibold uppercase xl:text-5xl;
   }
   .btn {
     @apply flex h-14 w-40 items-center justify-center border-2 border-base-100 bg-accent text-base font-semibold text-primary transition duration-150 ease-in-out max-lg:mx-auto lg:h-16 lg:w-60 lg:hover:bg-primary lg:hover:text-secondary;
   }
 
   .btn2 {
-    @apply flex h-12 w-48 items-center justify-center border-2 border-base-100 bg-accent text-sm font-semibold text-primary transition duration-150 ease-in-out lg:hover:bg-primary lg:hover:text-secondary;
+    @apply flex h-12 w-32 items-center justify-center border-2 border-base-100 bg-accent text-sm font-semibold text-primary transition duration-150 ease-in-out lg:w-48 lg:hover:bg-primary lg:hover:text-secondary;
   }
 
   .not-bordered {
