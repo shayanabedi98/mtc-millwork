@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MTC Millwork Inc.",
   description:
-    "Transform your space with MTC Millwork Inc.'s premium custom cabinets and millwork solutions. Elevate your interiors with bespoke designs crafted to perfection. Schedule a consultation today!",
+    "Transform your space with MTC Millwork Inc.'s premium custom cabinets and millwork solutions. Elevate your interiors with bespoke designs crafted to perfection.",
   keywords:
     "custom cabinets, millwork solutions, woodworking, carpentry, interior design, home renovation, kitchen remodeling, bespoke designs, craftsmanship, consultation",
 };
