@@ -36,7 +36,7 @@ export default function Testimonials() {
         }}
       />
 
-      <div className="gapped flex w-full flex-col items-center">
+      <div className="gapped flex w-full flex-col items-center select-none">
         <h3 className="title">Testimonials</h3>
         <AnimatePresence mode="popLayout">
           <motion.div
@@ -47,7 +47,7 @@ export default function Testimonials() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeInOut" }}
           >
-            <p className="md:2/3 flex h-72 items-center text-base font-normal lg:w-full sm:h-48 sm:w-3/4 md:h-64 lg:text-2xl">
+            <p className="md:2/3 flex h-80 items-center text-base font-normal lg:w-full sm:h-48 sm:w-3/4 md:h-64 lg:text-2xl max-lg:text-center">
               &quot;{testimonialsList[testimonialIndex].review}&quot;
             </p>
             <p className="text-base font-normal lg:text-lg">

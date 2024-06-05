@@ -1,6 +1,5 @@
 import Image from "next/image";
 import aboutUsImage from "@/public/assets/otherPictures/aboutUsHome.webp";
-import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -25,7 +24,7 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
-      <div className="bordered lg:w-1/2 lg:border-r-0">
+      <div className="bordered lg:w-1/2 lg:border-l-0">
         <Image
           className="object-cover max-lg:max-h-[400px] lg:min-h-[600px]"
           src={aboutUsImage}
