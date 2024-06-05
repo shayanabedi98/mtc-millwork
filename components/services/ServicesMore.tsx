@@ -52,7 +52,7 @@ export default function ServicesMore() {
   ];
 
   return (
-    <div className="container flex">
+    <div className="container grid xl:flex grid-cols-1 sm:grid-cols-2">
       {liArr.map((i, index) => {
         return (
           <ServicesMoreBox

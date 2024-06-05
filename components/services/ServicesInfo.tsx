@@ -16,8 +16,10 @@ export default function ServicesInfo({
   content,
 }: Props) {
   return (
-    <div className={`flex py-6 ${direction}`}>
-      <div className="flex w-1/2 flex-col">
+    <div
+      className={`flex flex-col py-6 max-lg:text-center ${direction}`}
+    >
+      <div className="flex w-full flex-col lg:w-1/2">
         <Image
           src={src}
           alt={alt}
@@ -26,8 +28,8 @@ export default function ServicesInfo({
           height={900}
         />
       </div>
-      <div className="bordered flex w-1/2 items-center justify-center">
-        <div className="flex max-w-md flex-col gap-6">
+      <div className="bordered flex w-full items-start justify-center max-lg:min-h-[270px] lg:w-1/2 lg:items-center">
+        <div className="flex max-w-md flex-col justify-start gap-6 max-lg:p-4">
           <h3 className="title text-3xl">{title}</h3>
           <p>{content}</p>
         </div>

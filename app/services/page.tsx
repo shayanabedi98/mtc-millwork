@@ -13,35 +13,35 @@ export default function Services() {
       />
       <div className="container flex flex-col">
         <ServicesInfo
-          direction="flex-row-reverse"
+          direction="lg:flex-row-reverse"
           alt=""
           src="/assets/services/services1.webp"
           title="Custom Kitchen Design"
           content="Our team of experienced designers will work with you to create a custom kitchen design that perfectly fits your style and needs. We use the finest and highest quality materials to bring your dream kitchen to life."
         />
         <ServicesInfo
-          direction="flex-row"
+          direction="lg:flex-row"
           alt=""
           src="/assets/services/services2.webp"
           title="Wall Unit Design"
           content="Our team of interior designers can help you create a space that reflects your personal style and meets your functional needs. We offer a wide range of wall unit design services to bring your vision to life."
         />
         <ServicesInfo
-          direction="flex-row-reverse"
+          direction="lg:flex-row-reverse"
           alt=""
           src="/assets/services/services3.webp"
           title="Custom Closets"
           content="At MTC Millwork, we provide premium custom closet design services, along with beautiful custom cabinetry and architectural millwork. We love what we do, and we do it with passion. We work closely with our clients to capture their dream space in details, bringing their visions to life."
         />
         <ServicesInfo
-          direction="flex-row"
+          direction="lg:flex-row"
           alt=""
           src="/assets/services/services4.webp"
           title="Vanity design"
           content="We offer custom bathroom design services that bring luxury and functionality to your space. Our team will work with you to create a design that meets your needs and exceeds your expectations."
         />
         <ServicesInfo
-          direction="flex-row-reverse"
+          direction="lg:flex-row-reverse"
           alt=""
           src="/assets/services/services5.webp"
           title="Custom Millwork"

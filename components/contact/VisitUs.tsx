@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function VisitUs() {
   return (
-    <div className="container-padding">
+    <div className="container-padding pb-0">
       <div className="bordered py-8 lg:container-padding mx-auto flex w-full flex-col items-center justify-center gap-12 bg-info max-lg:px-4 px-10 lg:w-2/3 xl:flex-row">
         <div className="flex flex-col xl:flex-row justify-center gap-12">
           <div className="flex w-full flex-col max-xl:text-center items-center xl:items-start justify-center gap-8 xl:w-1/2">
@@ -17,7 +17,7 @@ export default function VisitUs() {
               </p>
             </div>
             <div className="flex flex-col gap-6">
-              <h4 className="text-3xl">Address</h4>
+              <h4 className="text-xl xl:text-3xl">Address</h4>
               <a
                 href="https://maps.app.goo.gl/ZnYTTP6yMtPtmHaC7"
                 target="_blank"
@@ -26,7 +26,7 @@ export default function VisitUs() {
               </a>
             </div>
             <div className="flex flex-col gap-6">
-              <h4 className="text-3xl">Hours</h4>
+              <h4 className="text-xl xl:text-3xl">Hours</h4>
               <div className="flex gap-6">
                 <p className="w-24">Mon - Fri</p>
                 <p>8:00 am - 5:00 pm</p>

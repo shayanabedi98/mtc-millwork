@@ -3,7 +3,7 @@
 import NavbarItemDesktop from "./NavbarItemDesktop";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa";
-import { BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -51,10 +51,10 @@ export default function Navbar() {
           </div>
           <div className="flex items-center justify-end gap-2 border-l-[1px] border-accent pl-12 text-xl shadow-2xl transition duration-100 max-lg:hidden">
             <a
-              className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
-              href="tel:+14165000045"
+              className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 text-2xl font-normal transition duration-100 ease-in-out hover:border-current"
+              href="mailto:info@MTCMillwork.ca"
             >
-              <BsTelephoneFill />
+              <MdEmail />
             </a>
             <Link
               className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 font-normal transition duration-100 ease-in-out hover:border-current"
@@ -133,6 +133,28 @@ export default function Navbar() {
                 location="/projects"
                 content="PROJECTS"
               />
+              <div className="flex items-center justify-end gap-4 text-2xl">
+                <a
+                  className="flex items-center justify-center px-2 py-2 text-3xl font-normal"
+                  href="mailto:info@MTCMillwork.ca"
+                >
+                  <MdEmail />
+                </a>
+                <Link
+                  className="flex items-center justify-center px-2 py-2 font-normal"
+                  href="https://www.instagram.com/mtcmillwork"
+                  target="_blank"
+                >
+                  <RiInstagramFill />
+                </Link>
+                <Link
+                  className="flex items-center justify-center px-2 py-2 font-normal"
+                  href="https://www.facebook.com/mtcmillwork"
+                  target="_blank"
+                >
+                  <FaFacebookF />
+                </Link>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

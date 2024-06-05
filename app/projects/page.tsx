@@ -11,7 +11,16 @@ export default function Projects() {
         heroClass="hero3"
       />
       <div className="container">
-        <div className="container-padding">
+        <div className="w-2/3 mx-auto text-center flex flex-col gap-8">
+          <h3 className="title">EXPLORE OUR WORK</h3>
+          <p>
+            At MTC Millwork, we specialize in transforming dreams into a
+            functional and beautiful reality. Our experienced team handles
+            everything from designing the layout and selecting the finest
+            materials to building and installation.
+          </p>
+        </div>
+        <div className="mt-14">
           <Carousel
             images={[
               "/assets/projects/test1.webp",
@@ -22,7 +31,7 @@ export default function Projects() {
             ]}
           />
         </div>
-        <div className="container-padding">
+        <div className="mt-14">
           <Carousel
             images={[
               "/assets/projects/test1.webp",
@@ -33,7 +42,7 @@ export default function Projects() {
             ]}
           />
         </div>
-        <div className="container-padding">
+        <div className="mt-14">
           <Carousel
             images={[
               "/assets/projects/test1.webp",
@@ -44,7 +53,7 @@ export default function Projects() {
             ]}
           />
         </div>
-        <div className="container-padding">
+        <div className="mt-14">
           <Carousel
             images={[
               "/assets/projects/test1.webp",
@@ -55,7 +64,7 @@ export default function Projects() {
             ]}
           />
         </div>
-        <div className="container-padding">
+        <div className="mt-14">
           <Carousel
             images={[
               "/assets/projects/test1.webp",
