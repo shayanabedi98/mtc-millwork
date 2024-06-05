@@ -10,6 +10,7 @@ export default function Contact() {
         alt="Modern kitchen with beautiful wood cabinets and island."
         h1="CONTACT"
         heroClass="hero1"
+        blurry="/assets/lowQuality/hero4.webp"
       />
       <div className="container">
         <Questions />

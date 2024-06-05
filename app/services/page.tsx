@@ -10,6 +10,7 @@ export default function Services() {
         alt=""
         h1="SERVICES"
         heroClass="hero2"
+        blurry="/assets/lowQuality/hero5.webp"
       />
       <div className="container flex flex-col">
         <ServicesInfo

@@ -46,6 +46,8 @@ export default function HomeHero() {
             height={1080}
             src={slideShowImages[0]}
             alt="Home kitchen with a beautiful countertop and modern cabinets"
+            placeholder="blur"
+            blurDataURL="/assets/otherPictures/hero1.webp"
           />
         </motion.div>
       </AnimatePresence>

@@ -9,6 +9,7 @@ export default function Projects() {
         alt=""
         h1="PROJECTS"
         heroClass="hero3"
+        blurry="/assets/lowQuality/hero6.webp"
       />
       <div className="container">
         <div className="w-2/3 mx-auto text-center flex flex-col gap-8">

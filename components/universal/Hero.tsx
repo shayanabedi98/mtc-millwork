@@ -10,9 +10,10 @@ type Props = {
   h1: string;
   //   h2: string;
   heroClass: string;
+  blurry: string
 };
 
-export default function Hero({ src, alt, h1, heroClass }: Props) {
+export default function Hero({ src, alt, h1, heroClass, blurry }: Props) {
   const path = usePathname();
   const [pathIndex, setPathIndex] = useState(0);
 
@@ -46,6 +47,9 @@ export default function Hero({ src, alt, h1, heroClass }: Props) {
             alt={alt}
             width={2000}
             height={1000}
+            placeholder="blur"
+            blurDataURL={blurry} // Optional: Low-res version for blur effect
+
           />
         </div>
         <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.05)]">
