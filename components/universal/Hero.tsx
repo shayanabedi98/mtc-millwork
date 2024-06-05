@@ -35,7 +35,7 @@ export default function Hero({ src, alt, h1, heroClass, blurry }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{duration: 1}}
+        transition={{duration: 2}}
         key={pathIndex}
         className="bordered relative mt-16 lg:mt-28 border-l-0 border-r-0"
       >
@@ -48,8 +48,7 @@ export default function Hero({ src, alt, h1, heroClass, blurry }: Props) {
             width={2000}
             height={1000}
             placeholder="blur"
-            blurDataURL={blurry} // Optional: Low-res version for blur effect
-
+            blurDataURL={blurry}
           />
         </div>
         <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.05)]">
