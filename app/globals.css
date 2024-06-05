@@ -117,17 +117,22 @@ iframe:focus {
   object-position: 0 55%;
 }
 .hero3 {
-  object-position: 0 10%;
+  object-position: 0 40%;
 }
 
 @media (max-width: 1280px) {
   .hero1 {
     object-position: 20% 0;
   }
+
+
 }
 
 @media (max-width: 680px) {
   .hero1 {
     object-position: 60% 0;
+  }
+  .hero3 {
+    object-position: 10% 0px;
   }
 }

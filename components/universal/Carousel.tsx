@@ -18,7 +18,7 @@ export default function Carousel({ images }: Props) {
     <div className="container relative my-0 flex w-full select-none flex-col items-center">
       <div className="flex w-full items-center gap-10">
         <div
-          className="bordered absolute left-1 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:left-10"
+          className="bordered absolute left-2 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:left-10"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex > 0 ? prev - 1 : images.length - 1,
@@ -51,7 +51,7 @@ export default function Carousel({ images }: Props) {
           </motion.div>
         </AnimatePresence>
         <div
-          className="bordered absolute right-1 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:right-10"
+          className="bordered absolute right-2 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:right-10"
           onClick={() =>
             setCurrentImageIndex((prev) =>
               currentImageIndex == images.length - 1 ? 0 : prev + 1,

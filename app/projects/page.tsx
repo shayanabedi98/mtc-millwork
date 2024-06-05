@@ -5,14 +5,14 @@ export default function Projects() {
   return (
     <main>
       <Hero
-        src="/assets/otherPictures/hero6.webp"
+        src="/assets/otherPictures/hero3.webp"
         alt=""
         h1="PROJECTS"
         heroClass="hero3"
-        blurry="/assets/lowQuality/hero6.webp"
+        blurry="/assets/lowQuality/hero3.webp"
       />
       <div className="container">
-        <div className="w-2/3 mx-auto text-center flex flex-col gap-8">
+        <div className="w-3/4 lg:w-2/3 mx-auto text-center flex flex-col gap-8">
           <h3 className="title">EXPLORE OUR WORK</h3>
           <p>
             At MTC Millwork, we specialize in transforming dreams into a
