@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 type Props = {
   images: string[];
@@ -13,6 +14,9 @@ export default function Carousel({ images }: Props) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isShowImage, setIsShowImage] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+
+  console.log(isLoading);
 
   return (
     <div className="container relative my-0 flex w-full select-none flex-col items-center">
@@ -29,7 +33,7 @@ export default function Carousel({ images }: Props) {
         </div>
         <AnimatePresence mode="popLayout">
           <motion.div
-            className="w-full"
+            className="relative bordered mx-auto flex h-[300px] w-full items-center justify-center sm:h-[400px] lg:h-[700px]"
             key={currentImageIndex}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
@@ -37,17 +41,23 @@ export default function Carousel({ images }: Props) {
             transition={{ duration: 0.1 }}
           >
             <Image
-              className="bordered mx-auto h-[300px] w-full cursor-pointer object-cover sm:h-[400px] lg:h-[700px]"
+              className="h-full w-full cursor-pointer object-cover"
               onClick={() => {
                 setIsShowImage(true);
                 setSelectedImageIndex(currentImageIndex);
               }}
+              onLoad={() => setIsLoading(false)}
               priority
               width={1920}
               height={1080}
               src={images[currentImageIndex]}
               alt=""
             />
+            {isLoading && (
+              <div className="absolute">
+                <AiOutlineLoading3Quarters className="text-white text-3xl z-30" />
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
         <div
@@ -71,7 +81,10 @@ export default function Carousel({ images }: Props) {
                 height={100}
                 src={image}
                 alt=""
-                onClick={() => setCurrentImageIndex(index)}
+                onClick={() => {
+                  setCurrentImageIndex(index);
+                  setIsLoading(currentImageIndex == index ? false : true)
+                }}
               />
             </div>
           );
