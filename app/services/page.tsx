@@ -1,17 +1,12 @@
 import ServicesInfo from "@/components/services/ServicesInfo";
 import ServicesMore from "@/components/services/ServicesMore";
 import Hero from "@/components/universal/Hero";
+import { heroPictures } from "@/utils/imageStructure";
 
 export default function Services() {
   return (
     <main>
-      <Hero
-        src="/assets/otherPictures/hero5.webp"
-        alt=""
-        h1="SERVICES"
-        heroClass="hero2"
-        blurry="/assets/lowQuality/hero5.webp"
-      />
+      <Hero src={heroPictures[4]} alt="" h1="SERVICES" heroClass="hero2" />
       <div className="container flex flex-col">
         <ServicesInfo
           direction="lg:flex-row-reverse"

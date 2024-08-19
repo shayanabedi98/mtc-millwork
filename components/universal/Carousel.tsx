@@ -16,24 +16,23 @@ export default function Carousel({ images }: Props) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(isLoading);
-
   return (
     <div className="container relative my-0 flex w-full select-none flex-col items-center">
       <div className="flex w-full items-center gap-10">
         <div
-          className="bordered absolute left-2 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:left-10"
-          onClick={() =>
+          className="bordered absolute left-2 z-20 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:left-10"
+          onClick={() => {
             setCurrentImageIndex((prev) =>
               currentImageIndex > 0 ? prev - 1 : images.length - 1,
-            )
-          }
+            );
+            setIsLoading(true);
+          }}
         >
           <IoIosArrowBack />
         </div>
         <AnimatePresence mode="popLayout">
           <motion.div
-            className="relative bordered mx-auto flex h-[300px] w-full items-center justify-center sm:h-[400px] lg:h-[700px]"
+            className="bordered relative mx-auto flex h-[300px] w-full items-center justify-center sm:h-[400px] lg:h-[700px]"
             key={currentImageIndex}
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
@@ -55,18 +54,19 @@ export default function Carousel({ images }: Props) {
             />
             {isLoading && (
               <div className="absolute">
-                <AiOutlineLoading3Quarters className="text-white text-3xl z-30" />
+                <AiOutlineLoading3Quarters className="spin z-30 text-3xl text-white" />
               </div>
             )}
           </motion.div>
         </AnimatePresence>
         <div
-          className="bordered absolute right-2 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:right-10"
-          onClick={() =>
+          className="bordered absolute right-2 z-20 rotate-180 cursor-pointer bg-neutral text-4xl transition duration-75 active:bg-transparent lg:right-10"
+          onClick={() => {
             setCurrentImageIndex((prev) =>
               currentImageIndex == images.length - 1 ? 0 : prev + 1,
-            )
-          }
+            );
+            setIsLoading(true);
+          }}
         >
           <IoIosArrowBack />
         </div>
@@ -83,7 +83,7 @@ export default function Carousel({ images }: Props) {
                 alt=""
                 onClick={() => {
                   setCurrentImageIndex(index);
-                  setIsLoading(currentImageIndex == index ? false : true)
+                  setIsLoading(currentImageIndex == index ? false : true);
                 }}
               />
             </div>

@@ -8,10 +8,11 @@ export default function OurWork() {
 
       <Carousel
         images={[
-          "/assets/projects/test1.webp",
-          "/assets/projects/test2.webp",
-          "/assets/projects/test3.webp",
-          "/assets/otherPictures/homeHero.webp",
+          "/assets/mtc-webp/project7/2.webp",
+          "/assets/mtc-webp/project1/5.webp",
+          "/assets/mtc-webp/project2/5.webp",
+          "/assets/mtc-webp/project1/6.webp",
+          "/assets/mtc-webp/project4/5.webp",
         ]}
       />
       {/* <p className="mt-10 mx-auto mb-10 w-[80%] text-start">

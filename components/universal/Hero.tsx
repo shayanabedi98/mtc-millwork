@@ -10,10 +10,9 @@ type Props = {
   h1: string;
   //   h2: string;
   heroClass: string;
-  blurry: string
 };
 
-export default function Hero({ src, alt, h1, heroClass, blurry }: Props) {
+export default function Hero({ src, alt, h1, heroClass }: Props) {
   const path = usePathname();
   const [pathIndex, setPathIndex] = useState(0);
 
@@ -35,20 +34,18 @@ export default function Hero({ src, alt, h1, heroClass, blurry }: Props) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{duration: 2}}
+        transition={{ duration: 2 }}
         key={pathIndex}
-        className="bordered relative mt-16 lg:mt-28 border-l-0 border-r-0"
+        className="bordered relative mt-16 border-l-0 border-r-0 bg-stone-600 lg:mt-28"
       >
         <div>
           <Image
             priority
-            className={`${heroClass} h-[550px] md:h-[700px] lg:h-[810px] w-full object-cover`}
+            className={`${heroClass} h-[550px] w-full object-cover md:h-[700px] lg:h-[810px]`}
             src={src}
             alt={alt}
             width={2000}
-            height={1000}
-            placeholder="blur"
-            blurDataURL={blurry}
+            height={1300}
           />
         </div>
         <div className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.05)]">

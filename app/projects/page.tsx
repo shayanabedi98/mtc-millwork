@@ -1,18 +1,18 @@
 import Carousel from "@/components/universal/Carousel";
 import Hero from "@/components/universal/Hero";
+import { heroPictures, projects } from "@/utils/imageStructure";
 
 export default function Projects() {
   return (
     <main>
       <Hero
-        src="/assets/otherPictures/hero3.webp"
+        src={heroPictures[3]}
         alt=""
         h1="PROJECTS"
         heroClass="hero3"
-        blurry="/assets/lowQuality/hero3.webp"
       />
       <div className="container">
-        <div className="w-3/4 lg:w-2/3 mx-auto text-center flex flex-col gap-8">
+        <div className="mx-auto flex w-3/4 flex-col gap-8 text-center lg:w-2/3">
           <h3 className="title">EXPLORE OUR WORK</h3>
           <p>
             At MTC Millwork, we specialize in transforming dreams into a
@@ -22,59 +22,19 @@ export default function Projects() {
           </p>
         </div>
         <div className="mt-14">
-          <Carousel
-            images={[
-              "/assets/projects/test1.webp",
-              "/assets/projects/test2.webp",
-              "/assets/projects/test3.webp",
-              "/assets/projects/test4.webp",
-              "/assets/otherPictures/homeHero.webp",
-            ]}
-          />
+          <Carousel images={projects[0].map((pic) => pic)} />
         </div>
         <div className="mt-14">
-          <Carousel
-            images={[
-              "/assets/projects/test1.webp",
-              "/assets/projects/test2.webp",
-              "/assets/projects/test3.webp",
-              "/assets/projects/test4.webp",
-              "/assets/otherPictures/homeHero.webp",
-            ]}
-          />
+          <Carousel images={projects[1].map((pic) => pic)} />
         </div>
         <div className="mt-14">
-          <Carousel
-            images={[
-              "/assets/projects/test1.webp",
-              "/assets/projects/test2.webp",
-              "/assets/projects/test3.webp",
-              "/assets/projects/test4.webp",
-              "/assets/otherPictures/homeHero.webp",
-            ]}
-          />
+          <Carousel images={projects[2].map((pic) => pic)} />
         </div>
         <div className="mt-14">
-          <Carousel
-            images={[
-              "/assets/projects/test1.webp",
-              "/assets/projects/test2.webp",
-              "/assets/projects/test3.webp",
-              "/assets/projects/test4.webp",
-              "/assets/otherPictures/homeHero.webp",
-            ]}
-          />
+          <Carousel images={projects[3].map((pic) => pic)} />
         </div>
         <div className="mt-14">
-          <Carousel
-            images={[
-              "/assets/projects/test1.webp",
-              "/assets/projects/test2.webp",
-              "/assets/projects/test3.webp",
-              "/assets/projects/test4.webp",
-              "/assets/otherPictures/homeHero.webp",
-            ]}
-          />
+          <Carousel images={projects[4].map((pic) => pic)} />
         </div>
       </div>
     </main>

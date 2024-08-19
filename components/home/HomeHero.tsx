@@ -3,13 +3,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { heroPictures } from "@/utils/imageStructure";
 
 export default function HomeHero() {
-  const slideShowImages = [
-    "/assets/otherPictures/hero1.webp",
-    "/assets/otherPictures/hero2.webp",
-    "/assets/otherPictures/hero3.webp",
-  ];
+  // const slideShowImages = [
+  //   "/assets/otherPictures/hero1.webp",
+  //   "/assets/otherPictures/hero2.webp",
+  //   "/assets/otherPictures/hero3.webp",
+  // ];
   // const [opacity, setOpacity] = useState(1);
   // const [slideShowIndex, setSlideShowIndex] = useState(0);
 
@@ -28,7 +29,7 @@ export default function HomeHero() {
   // });
 
   return (
-    <div className="bordered relative mt-16 border-l-0 border-r-0 bg-accent lg:mt-28">
+    <div className="bordered relative mt-16 border-l-0 border-r-0 bg-stone-600 lg:mt-28">
       <AnimatePresence mode="popLayout">
         <motion.div
           // key={slideShowIndex}
@@ -40,11 +41,11 @@ export default function HomeHero() {
           className=""
         >
           <Image
-            className="mx-auto h-[550px] w-full bg-accent object-cover md:h-[700px] lg:h-[810px]"
+            className="mx-auto h-[550px] w-full object-cover md:h-[700px] lg:h-[810px]"
             priority
             width={1980}
             height={1080}
-            src={slideShowImages[0]}
+            src={heroPictures[1]}
             alt="Home kitchen with a beautiful countertop and modern cabinets"
             placeholder="blur"
             blurDataURL="/assets/otherPictures/hero1.webp"
@@ -57,9 +58,11 @@ export default function HomeHero() {
         transition={{ delay: 0.8, duration: 1.5 }}
         className="absolute top-0 flex h-full w-full flex-col items-center justify-center gap-4 bg-[rgba(0,0,0,0.15)]"
       >
-        <h1>Welcome to MTC Millwork</h1>
-        <h2>Where we create timeless elegance</h2>
-        <Link href="/contact" className="btn bordered mt-20">
+        <h1 className="font-bold lg:text-6xl">Welcome to MTC Millwork</h1>
+        <h2 className="font-semibold lg:text-4xl">
+          Where we create timeless elegance
+        </h2>
+        <Link href="/contact" className="btn bordered mt-16">
           Contact
         </Link>
       </motion.div>
