@@ -107,11 +107,12 @@ export default function Carousel({ images }: Props) {
             <div className="flex items-center justify-center">
               <IoIosArrowBack
                 className="max-md:bordered absolute left-2 cursor-pointer text-4xl max-md:bg-accent lg:relative lg:left-12 lg:text-5xl lg:hover:text-stone-400"
-                onClick={() =>
+                onClick={() => {
                   setSelectedImageIndex((prev) =>
                     selectedImageIndex > 0 ? prev - 1 : images.length - 1,
-                  )
-                }
+                  );
+                  setIsLoading(true);
+                }}
               />
               <Image
                 className="mx-auto w-full md:min-w-[60%] md:max-w-[80%]"
@@ -120,14 +121,24 @@ export default function Carousel({ images }: Props) {
                 priority
                 src={images[selectedImageIndex]}
                 alt=""
+                onLoad={() => setIsLoading(false)}
               />
+              {isLoading && (
+                <div className="absolute rounded-full bg-stone-600 p-1">
+                  <AiOutlineLoading3Quarters className="spin z-30 text-3xl text-white" />
+                </div>
+              )}
+              <div className="absolute top-[80%] text-lg bg-stone-600 px-1 rounded-md bg-opacity-90">
+                {selectedImageIndex + 1} / {images.length}
+              </div>
               <IoIosArrowBack
                 className="max-md:bordered absolute right-2 rotate-180 cursor-pointer text-4xl max-md:bg-accent lg:relative lg:right-12 lg:text-5xl lg:hover:text-stone-400"
-                onClick={() =>
+                onClick={() => {
                   setSelectedImageIndex((prev) =>
                     selectedImageIndex == images.length - 1 ? 0 : prev + 1,
-                  )
-                }
+                  );
+                  setIsLoading(true);
+                }}
               />
             </div>
           </motion.div>

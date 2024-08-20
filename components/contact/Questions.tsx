@@ -14,7 +14,7 @@ export default function Questions() {
           <div className="flex flex-col gap-10 lg:flex-row">
             <div className="flex flex-col">
               <p className="max-xl:font-bold">Email</p>
-              <a href="mailto:info@MTCMillwork.ca">info@MTCMillwork.ca</a>
+              <a href="mailto:info@mtckitchen.ca">info@mtckitchen.ca</a>
             </div>
             <div className="flex flex-col">
               <p className="max-xl:font-bold">Phone</p>

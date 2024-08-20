@@ -52,7 +52,7 @@ export default function Navbar() {
           <div className="flex items-center justify-end gap-2 border-l-[1px] border-accent pl-12 text-xl shadow-2xl transition duration-100 max-lg:hidden">
             <a
               className="flex items-center justify-center border-b-2 border-transparent px-2 py-2 text-2xl font-normal transition duration-100 ease-in-out hover:border-current"
-              href="mailto:info@MTCMillwork.ca"
+              href="mailto:info@mtckitchen.ca"
             >
               <MdEmail />
             </a>
@@ -136,7 +136,7 @@ export default function Navbar() {
               <div className="flex items-center justify-end gap-4 text-2xl">
                 <a
                   className="flex items-center justify-center px-2 py-2 text-3xl font-normal"
-                  href="mailto:info@MTCMillwork.ca"
+                  href="mailto:info@mtckitchen.ca"
                 >
                   <MdEmail />
                 </a>

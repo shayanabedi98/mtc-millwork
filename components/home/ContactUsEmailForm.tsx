@@ -12,7 +12,7 @@ export default function ContactUsEmailForm() {
       setResult("Sending....");
       const formData = new FormData(event.target);
 
-      formData.append("access_key", "c3cd9d5f-aa96-47ca-9e1f-abc7ef7ca1b1");
+      formData.append("access_key", "a8b9d83a-e32b-479d-bd3d-45faf34678a2");
 
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -36,7 +36,10 @@ export default function ContactUsEmailForm() {
 
   return (
     <div className="contact-home">
-      <form onSubmit={onSubmit} className="flex max-lg:max-w-96 mx-auto flex-col items-center gap-2 text-secondary">
+      <form
+        onSubmit={onSubmit}
+        className="mx-auto flex flex-col items-center gap-2 text-secondary max-lg:max-w-96"
+      >
         <input
           value={honeyPot}
           onChange={(e) => setHoneyPot(e.target.value)}
@@ -45,7 +48,7 @@ export default function ContactUsEmailForm() {
           name="subject"
           className="hidden"
         />
-        <div className="name w-full flex gap-[12px]">
+        <div className="name flex w-full gap-[12px]">
           <div className="flex w-full flex-col gap-2">
             <label htmlFor="fname">First Name</label>
             <input type="text" name="fname" required />
@@ -61,6 +64,11 @@ export default function ContactUsEmailForm() {
         <input type="tel" name="phone" inputMode="numeric" />
         <label htmlFor="message">Message</label>
         <textarea name="message" required></textarea>
+        <input
+          type="hidden"
+          name="from_name"
+          value="MTC Millwork Website"
+        ></input>
         <button type="submit" className="btn2 my-4 w-full">
           Submit Form
         </button>

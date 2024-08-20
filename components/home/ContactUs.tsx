@@ -28,7 +28,7 @@ export default function ContactUs() {
           </div>
           <div className="flex items-center gap-16 lg:gap-10">
             <MdOutlineEmail className="contact-icon" />
-            <a href="mailto:info@MTCMillwork.ca">info@MTCMillwork.ca</a>
+            <a href="mailto:info@mtckitchen.ca">info@mtckitchen.ca</a>
           </div>
           <div className="flex items-center gap-16 lg:gap-10">
             <IoShareSocialOutline className="contact-icon" />
