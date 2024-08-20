@@ -32,11 +32,13 @@ export default function Navbar() {
           <Image
             src={logoIcon}
             alt="MTC Millwork logo symbol"
+            priority
             className="w-10 lg:w-14"
           />
           <Image
             src={logoName}
             alt="MTC Millwork logo name"
+            priority
             className="w-32 lg:w-40"
           />
         </Link>
